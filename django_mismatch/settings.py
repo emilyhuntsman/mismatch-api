@@ -26,7 +26,9 @@ SECRET_KEY = 'ow#iszh6d1&84*$daan28%v-i43e+)s0tbkm^)hqd*6v+@mr9_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'mismatch-api.herokuapp.com'
+]
 
 
 # Application definition
