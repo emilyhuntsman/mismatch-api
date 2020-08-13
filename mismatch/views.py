@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from .models import Card
 from django.contrib.auth.models import User
 from .serializers import CardSerializer, UserSerializer, TokenSerializer
-from django.contrid.auth import authenticate, login
+from django.contrib.auth import authenticate, login
 from rest_framework_simplejwt.tokens import RefreshToken
 
 class CardList(generics.ListCreateAPIView):
