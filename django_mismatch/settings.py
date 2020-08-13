@@ -48,10 +48,7 @@ INSTALLED_APPS = [
     'corsheaders'
 ]
 
-CORS_ORIGIN_WHITELIST = [
-    "https://mismatch-me.herokuapp.com",
-    "http://localhost:3000",
-]
+CORS_ORIGIN_ALLOW_ALL = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
