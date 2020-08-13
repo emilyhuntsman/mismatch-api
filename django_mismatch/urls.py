@@ -29,4 +29,5 @@ urlpatterns = [
          name='token_obtain_pair'),
     path('api/token/refresh/', jwt_views.TokenRefreshView.as_view(),
          name='token_refresh'),
+    path('user/login/', views.LoginView.as_view(), name="auth-login"),
 ]
