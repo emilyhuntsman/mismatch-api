@@ -36,3 +36,26 @@ class LoginView(generics.ListCreateAPIView):
             serializer.is_valid()
             return Response(serializer.data)
         return Response(status=status.HTTP_401_UNAUTHORIZED)
+
+class RegisterUsersView(generics.ListCreateAPIView):
+    """
+    POST user/signup/
+    """
+    permission_classes = (permissions.AllowAny,)
+    serializer_class = UserSerializer
+    queryset = User.objects.all()
+
+    def post(self, request, *args, **kwargs):
+        username = request.data.get("username", "")
+        password = request.data.get("password", "")
+        if not username and not password:
+            return Response(
+                data={
+                    "message": "username and password are required to register a user"
+                },
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        new_user = User.objects.create_user(
+            username=username, password=password
+        )
+        return Response(status=status.HTTP_201_CREATED)
