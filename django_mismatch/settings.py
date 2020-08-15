@@ -45,8 +45,12 @@ INSTALLED_APPS = [
     'mismatch',
     'django_extensions',
     'rest_framework',
-    'corsheaders'
+    'rest_framework.authtoken',
+    'corsheaders',
 ]
+
+STREAM_API_KEY = "kr7ceftw2hup"
+STREAM_API_SECRET = "9h2zyvsvbshvr7zpme6jsde7za6e8s6yjnxhtvqvakdcgpa37mqjax5wyr5a9ndr"
 
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -121,6 +125,7 @@ REST_FRAMEWORK = {
     # or allow read-only access for unauthenticated users.
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
