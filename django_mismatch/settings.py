@@ -49,9 +49,6 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 
-STREAM_API_KEY = "kr7ceftw2hup"
-STREAM_API_SECRET = "9h2zyvsvbshvr7zpme6jsde7za6e8s6yjnxhtvqvakdcgpa37mqjax5wyr5a9ndr"
-
 CORS_ORIGIN_ALLOW_ALL = True
 
 MIDDLEWARE = [
