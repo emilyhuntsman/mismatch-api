@@ -6,7 +6,7 @@ from django.conf import settings
 class CardSerializer(serializers.ModelSerializer):
     class Meta:
         model = Card
-        fields = ('q','a','b')
+        fields = ('q','a','b','topic')
 
 class UserSerializer(serializers.ModelSerializer):
 
