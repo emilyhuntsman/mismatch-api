@@ -97,7 +97,8 @@ DATABASES = {
         'NAME': 'mismatch',
         'USER': 'mismatchuser',
         'PASSWORD': 'mismatch',
-        'HOST': 'localhost'
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 # DATABASES = {
