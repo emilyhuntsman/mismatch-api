@@ -29,7 +29,7 @@ SECRET_KEY = 'ow#iszh6d1&84*$daan28%v-i43e+)s0tbkm^)hqd*6v+@mr9_'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://mismatch-api.herokuapp.com',
+    'mismatch-api.herokuapp.com',
     'localhost'
 ]
 
